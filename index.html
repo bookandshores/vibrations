@@ -21,8 +21,10 @@
             background: linear-gradient(to bottom, #FF69B4, #FF8EC1, #81C4E7, #0C4A6E);
             color: white;
             overflow-x: hidden;
+            line-height: 1.6;
         }
         
+        /* ==================== HERO - MOBILE FIRST ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -30,21 +32,20 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(rgba(12,74,110,0.55), rgba(255,105,180,0.35));
+            background: linear-gradient(rgba(12,74,110,0.65), rgba(255,105,180,0.45));
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 70px 20px 50px;
         }
         
         .hero-image {
-            width: 320px;
-            height: 320px;
+            width: 260px;
+            height: 260px;
             border-radius: 50%;
             border: 14px solid var(--saffron);
-            box-shadow: 0 0 80px rgba(255,153,51,0.9), 
-                        0 0 160px rgba(255,105,180,0.6);
+            box-shadow: 0 0 60px rgba(255,153,51,0.9), 
+                        0 0 120px rgba(255,105,180,0.7);
             overflow: hidden;
-            z-index: 2;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         
         .hero-image img {
@@ -55,30 +56,30 @@
         
         .hero-content {
             z-index: 3;
-            max-width: 700px;
+            max-width: 100%;
             padding: 0 15px;
         }
         
         .hero h1 {
             font-family: 'Oswald', sans-serif;
-            font-size: 5.2rem;
-            letter-spacing: 8px;
+            font-size: 3.8rem;
+            letter-spacing: 6px;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px #000, 4px 4px 0 #000;
+            text-shadow: 0 0 25px #000, 3px 3px 0 #000;
         }
         
         .hero .subtitle {
             font-family: 'Cinzel', serif;
-            font-size: 1.55rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.85);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.9);
             font-weight: 700;
         }
         
         .hero .reason {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.85);
+            text-shadow: 0 3px 12px rgba(0,0,0,0.9);
             font-style: italic;
         }
         
@@ -87,14 +88,14 @@
             background: var(--saffron);
             color: white;
             border: none;
-            padding: 1.3rem 4rem;
-            font-size: 1.35rem;
+            padding: 1.2rem 3rem;
+            font-size: 1.25rem;
             letter-spacing: 3px;
             cursor: pointer;
-            box-shadow: 0 15px 40px rgba(255,153,51,0.7);
+            box-shadow: 0 15px 35px rgba(255,153,51,0.7);
             transition: all 0.4s;
             width: 100%;
-            max-width: 320px;
+            max-width: 280px;
         }
         
         .play-btn:hover {
@@ -102,15 +103,16 @@
             background: #FFBB66;
         }
         
+        /* ==================== SECTIONS ==================== */
         section {
-            padding: 5rem 1.5rem;
+            padding: 4rem 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
         .music-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.8rem;
         }
         
@@ -122,13 +124,8 @@
             transition: 0.5s;
         }
         
-        .track-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(255,105,180,0.5);
-        }
-        
         .track-art {
-            height: 240px;
+            height: 220px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -141,7 +138,7 @@
             height: 100%;
             object-fit: contain;
             object-position: center;
-            padding: 12px;
+            padding: 15px;
         }
         
         .track-info {
@@ -151,7 +148,7 @@
         
         .track-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.45rem;
+            font-size: 1.4rem;
             color: #F4D9A8;
         }
         
@@ -159,7 +156,7 @@
             background: rgba(255,105,180,0.15);
             border: 3px solid var(--saffron);
             border-radius: 20px;
-            padding: 3rem 2rem;
+            padding: 3rem 1.5rem;
             text-align: center;
         }
         
@@ -169,11 +166,14 @@
             background: var(--deep-ocean);
         }
 
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 4.2rem; letter-spacing: 6px; }
-            .hero-image { width: 280px; height: 280px; }
-            .hero .subtitle { font-size: 1.35rem; }
+        /* Desktop enhancements */
+        @media (min-width: 768px) {
+            .hero-image { width: 460px; height: 460px; }
+            .hero h1 { font-size: 6.8rem; letter-spacing: 12px; }
+            .hero .subtitle { font-size: 2rem; }
+            .hero .reason { font-size: 1.45rem; }
+            .track-art { height: 260px; }
+            .music-grid { gap: 2.5rem; }
         }
     </style>
 </head>
@@ -195,7 +195,7 @@
     </section>
 
     <section id="music">
-        <h2 style="text-align:center; font-size:3rem; margin-bottom:3rem; color:var(--saffron); font-family:'Oswald',sans-serif; letter-spacing:6px;">
+        <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem; color:var(--saffron); font-family:'Oswald',sans-serif; letter-spacing:6px;">
             COSMIC OFFERINGS
         </h2>
         
