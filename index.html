@@ -29,16 +29,17 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(rgba(12,74,110,0.65), rgba(255,105,180,0.4));
+            background: linear-gradient(rgba(12,74,110,0.55), rgba(255,105,180,0.35));
             text-align: center;
         }
         
         .hero-image {
-            width: 420px;
-            height: 420px;
+            width: 520px;   /* Made larger */
+            height: 520px;
             border-radius: 50%;
-            border: 12px solid var(--saffron);
-            box-shadow: 0 0 80px rgba(255,153,51,0.8), 0 0 160px rgba(255,105,180,0.6);
+            border: 16px solid var(--saffron);
+            box-shadow: 0 0 100px rgba(255,153,51,0.9), 
+                        0 0 180px rgba(255,105,180,0.7);
             overflow: hidden;
             z-index: 2;
         }
@@ -55,22 +56,31 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 3;
-            max-width: 700px;
+            max-width: 780px;
+            padding: 0 20px;
         }
         
         .hero h1 {
             font-family: 'Oswald', sans-serif;
-            font-size: 7.2rem;
+            font-size: 7.8rem;
             letter-spacing: 12px;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 30px #000;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 30px #000, 4px 4px 0 #000;
         }
         
         .hero .subtitle {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+            font-size: 2.1rem;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            font-weight: 700;
+        }
+        
+        .hero .reason {
+            font-size: 1.45rem;
+            margin-bottom: 3rem;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            font-style: italic;
         }
         
         .play-btn {
@@ -78,16 +88,16 @@
             background: var(--saffron);
             color: white;
             border: none;
-            padding: 1.4rem 4.5rem;
-            font-size: 1.5rem;
+            padding: 1.5rem 5rem;
+            font-size: 1.55rem;
             letter-spacing: 4px;
             cursor: pointer;
-            box-shadow: 0 20px 50px rgba(255,153,51,0.6);
+            box-shadow: 0 20px 50px rgba(255,153,51,0.7);
             transition: all 0.4s;
         }
         
         .play-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
             background: #FFBB66;
         }
         
@@ -157,13 +167,13 @@
     <!-- Hero with P1 -->
     <section class="hero">
         <div class="hero-image">
-            <img src="attachments/P1.jpg" alt="Paramahansa Yogananda">
+            <img src="P1.jpg" alt="Paramahansa Yogananda">
         </div>
         
         <div class="hero-content">
             <h1>VIBRATIONS</h1>
-            <p class="subtitle">Inspired by the Divine Light of Paramahansa Yogananda</p>
-            <p style="font-size:1.4rem; max-width:600px; margin:0 auto 2.5rem;">This music flows because of him.</p>
+            <p class="subtitle">INSPIRED BY THE DIVINE LIGHT OF PARAMAHANSA YOGANANDA</p>
+            <p class="reason">This music flows because of him.</p>
             <button onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})" class="play-btn">
                 LISTEN TO THE CURRENT
             </button>
@@ -178,7 +188,7 @@
         <div class="music-grid">
             <div class="track-card">
                 <div class="track-art">
-                    <img src="attachments/P1.jpg" alt="Paramahansa Yogananda">
+                    <img src="P1.jpg" alt="Paramahansa Yogananda">
                 </div>
                 <div class="track-info">
                     <div class="track-title">Ocean of Bliss</div>
@@ -191,7 +201,7 @@
             
             <div class="track-card">
                 <div class="track-art">
-                    <img src="attachments/P2.jpg" alt="Autobiography of a Yogi">
+                    <img src="P2.jpg" alt="Autobiography of a Yogi">
                 </div>
                 <div class="track-info">
                     <div class="track-title">Yogananda's Dream</div>
@@ -204,7 +214,7 @@
             
             <div class="track-card">
                 <div class="track-art">
-                    <img src="attachments/P3.jpg" alt="Yogananda with Sri Yukteswar">
+                    <img src="P3.jpg" alt="Yogananda with Sri Yukteswar">
                 </div>
                 <div class="track-info">
                     <div class="track-title">Light of the Soul</div>
