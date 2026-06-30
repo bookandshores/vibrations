@@ -26,22 +26,25 @@
         .hero {
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
             background: linear-gradient(rgba(12,74,110,0.55), rgba(255,105,180,0.35));
             text-align: center;
+            padding-top: 80px;
         }
         
         .hero-image {
-            width: 520px;   /* Made larger */
-            height: 520px;
+            width: 480px;
+            height: 480px;
             border-radius: 50%;
-            border: 16px solid var(--saffron);
+            border: 18px solid var(--saffron);
             box-shadow: 0 0 100px rgba(255,153,51,0.9), 
-                        0 0 180px rgba(255,105,180,0.7);
+                        0 0 200px rgba(255,105,180,0.6);
             overflow: hidden;
             z-index: 2;
+            margin-bottom: 40px;
         }
         
         .hero-image img {
@@ -51,35 +54,31 @@
         }
         
         .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             z-index: 3;
-            max-width: 780px;
+            max-width: 800px;
             padding: 0 20px;
         }
         
         .hero h1 {
             font-family: 'Oswald', sans-serif;
-            font-size: 7.8rem;
+            font-size: 7.2rem;
             letter-spacing: 12px;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             text-shadow: 0 0 30px #000, 4px 4px 0 #000;
         }
         
         .hero .subtitle {
             font-family: 'Cinzel', serif;
-            font-size: 2.1rem;
-            margin-bottom: 1.2rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            font-size: 2.05rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.85);
             font-weight: 700;
         }
         
         .hero .reason {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             margin-bottom: 3rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.85);
             font-style: italic;
         }
         
@@ -127,14 +126,21 @@
         }
         
         .track-art {
-            height: 260px;
+            height: 280px;           /* Slightly taller */
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
         }
         
         .track-art img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;     /* Changed to contain - no more head cutting */
+            object-position: center;
+            padding: 10px;
+            background: #111;
         }
         
         .track-info {
@@ -164,7 +170,7 @@
     </style>
 </head>
 <body>
-    <!-- Hero with P1 -->
+    <!-- Hero with P1 as shrine-like focal point -->
     <section class="hero">
         <div class="hero-image">
             <img src="P1.jpg" alt="Paramahansa Yogananda">
