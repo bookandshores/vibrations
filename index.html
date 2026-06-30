@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBRATIONS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;500&family=Oswald:wght@500;700&family=Cinzel:wght@400;700&display=swap');
+        
+        :root {
+            --bubblegum: #FF69B4;
+            --saffron: #FF9933;
+            --light-blue: #81C4E7;
+            --deep-ocean: #0C4A6E;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(to bottom, #FF69B4, #FF8EC1, #81C4E7, #0C4A6E);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(12,74,110,0.65), rgba(255,105,180,0.4));
+            text-align: center;
+        }
+        
+        .hero-image {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 12px solid var(--saffron);
+            box-shadow: 0 0 80px rgba(255,153,51,0.8), 0 0 160px rgba(255,105,180,0.6);
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 7.2rem;
+            letter-spacing: 12px;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px #000;
+        }
+        
+        .hero .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .play-btn {
+            font-family: 'Cinzel', serif;
+            background: var(--saffron);
+            color: white;
+            border: none;
+            padding: 1.4rem 4.5rem;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            cursor: pointer;
+            box-shadow: 0 20px 50px rgba(255,153,51,0.6);
+            transition: all 0.4s;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.1);
+            background: #FFBB66;
+        }
+        
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .track-card {
+            background: rgba(255,255,255,0.12);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 3px solid var(--saffron);
+            transition: 0.5s;
+        }
+        
+        .track-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 30px 60px rgba(255,105,180,0.5);
+        }
+        
+        .track-art {
+            height: 260px;
+            overflow: hidden;
+        }
+        
+        .track-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .track-info {
+            padding: 1.8rem;
+            text-align: center;
+        }
+        
+        .track-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.65rem;
+            color: #F4D9A8;
+        }
+        
+        .about {
+            background: rgba(255,105,180,0.15);
+            border: 3px solid var(--saffron);
+            border-radius: 20px;
+            padding: 4rem;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 4rem;
+            background: var(--deep-ocean);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero with P1 -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="attachments/P1.jpg" alt="Paramahansa Yogananda">
+        </div>
+        
+        <div class="hero-content">
+            <h1>VIBRATIONS</h1>
+            <p class="subtitle">Inspired by the Divine Light of Paramahansa Yogananda</p>
+            <p style="font-size:1.4rem; max-width:600px; margin:0 auto 2.5rem;">This music flows because of him.</p>
+            <button onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})" class="play-btn">
+                LISTEN TO THE CURRENT
+            </button>
+        </div>
+    </section>
+
+    <section id="music">
+        <h2 style="text-align:center; font-size:3.5rem; margin-bottom:3rem; color:var(--saffron); font-family:'Oswald',sans-serif; letter-spacing:8px;">
+            COSMIC OFFERINGS
+        </h2>
+        
+        <div class="music-grid">
+            <div class="track-card">
+                <div class="track-art">
+                    <img src="attachments/P2.jpg" alt="Autobiography of a Yogi">
+                </div>
+                <div class="track-info">
+                    <div class="track-title">Ocean of Bliss</div>
+                    <p style="opacity:0.85;">Guitar Meditations</p>
+                    <audio controls style="margin-top:1rem; width:90%;">
+                        <source src="music/ocean-of-bliss.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+            
+            <div class="track-card">
+                <div class="track-art">
+                    <img src="attachments/P3.jpg" alt="Yogananda lineage">
+                </div>
+                <div class="track-info">
+                    <div class="track-title">Yogananda's Dream</div>
+                    <p style="opacity:0.85;">Guitar Meditations</p>
+                    <audio controls style="margin-top:1rem; width:90%;">
+                        <source src="music/yoganandas-dream.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+            
+            <div class="track-card">
+                <div class="track-art">
+                    <img src="attachments/P1.jpg" alt="Paramahansa Yogananda">
+                </div>
+                <div class="track-info">
+                    <div class="track-title">Light of the Soul</div>
+                    <p style="opacity:0.85;">Guitar Meditations</p>
+                    <audio controls style="margin-top:1rem; width:90%;">
+                        <source src="music/light-of-the-soul.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 style="font-size:3rem; margin-bottom:2rem; color:var(--saffron);">THE VIBE</h2>
+        <p style="font-size:1.35rem; max-width:700px; margin:0 auto;">
+            These spontaneous guitar meditations flow directly from the teachings and presence of Paramahansa Yogananda.
+        </p>
+        <p style="margin-top:2rem; font-style:italic; font-size:1.4rem;">
+            “The music is not mine. It flows through.”
+        </p>
+    </section>
+
+    <footer>
+        <p style="margin-top:1rem;">
+            <a href="https://musicvibes.world" style="color:var(--saffron); text-decoration:none;">musicvibes.world</a>
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('audio').forEach(audio => {
+            audio.addEventListener('play', () => {
+                document.querySelectorAll('audio').forEach(a => { if (a !== audio) a.pause(); });
+            });
+        });
+    </script>
+</body>
+</html>
